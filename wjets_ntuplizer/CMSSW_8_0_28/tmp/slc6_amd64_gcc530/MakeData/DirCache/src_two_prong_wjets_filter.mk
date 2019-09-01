@@ -1,0 +1,2 @@
+ALL_PACKAGES += two_prong/wjets_filter
+subdirs_src_two_prong_wjets_filter := src_two_prong_wjets_filter_plugins src_two_prong_wjets_filter_python src_two_prong_wjets_filter_test src_two_prong_wjets_filter_doc

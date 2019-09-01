@@ -1,0 +1,4 @@
+plugintwo_prongwjets_analyzerAuto.so wjets_analyzer CMS%EDM%Framework%Module
+plugintwo_prongwjets_analyzerAuto.so wjets_analyzer CMS%EDM%Framework%ParameterSet%Description
+plugintwo_prongwjets_filterAuto.so wjets_filter CMS%EDM%Framework%Module
+plugintwo_prongwjets_filterAuto.so wjets_filter CMS%EDM%Framework%ParameterSet%Description

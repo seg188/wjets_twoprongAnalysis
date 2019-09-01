@@ -1,0 +1,3 @@
+tmp/slc6_amd64_gcc530/src/two_prong/wjets_filter/plugins/two_prongwjets_filterAuto/wjets_filter.o: \
+ src/two_prong/wjets_filter/plugins/wjets_filter.cc \
+

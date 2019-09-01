@@ -1,0 +1,2 @@
+01:/bin/rm -f lib/slc6_amd64_gcc530/plugintwo_prongwjets_filterAuto.so lib/slc6_amd64_gcc530/two_prongwjets_filterAuto.edmplugin
+90:edmPluginRefresh lib/slc6_amd64_gcc530
