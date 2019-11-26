@@ -1,0 +1,3 @@
+tmp/slc7_amd64_gcc630/src/two_prong/wjets_analyzer/plugins/two_prongwjets_analyzerAuto/wjets_analyzer.o: \
+ src/two_prong/wjets_analyzer/plugins/wjets_analyzer.cc \
+

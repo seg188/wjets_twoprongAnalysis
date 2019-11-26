@@ -1,0 +1,2 @@
+ALL_PACKAGES += two_prong/wjets_analyzer
+subdirs_src_two_prong_wjets_analyzer := src_two_prong_wjets_analyzer_test src_two_prong_wjets_analyzer_python src_two_prong_wjets_analyzer_plugins

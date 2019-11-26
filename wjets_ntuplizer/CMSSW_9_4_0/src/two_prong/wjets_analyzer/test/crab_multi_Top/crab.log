@@ -1,0 +1,22 @@
+DEBUG 2019-11-19 03:11:41.633 UTC: 	 Running on: Linux hexcms 3.10.0-1062.4.1.el7.x86_64 #1 SMP Fri Oct 18 17:15:30 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2019-11-19 03:11:41.646 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2019-11-19 03:11:41.646 UTC: 	 Executing command: 'getlog'
+DEBUG 2019-11-19 03:11:41.646 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-11-19 04:08:51.571 UTC: 	 Running on: Linux hexcms 3.10.0-1062.4.1.el7.x86_64 #1 SMP Fri Oct 18 17:15:30 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2019-11-19 04:08:51.585 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2019-11-19 04:08:51.585 UTC: 	 Executing command: 'kill'
+DEBUG 2019-11-19 04:08:51.585 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+ERROR 2019-11-19 04:08:51.586 UTC: 	 Cannot find .requestcache file in CRAB project directory /cms/seg188/eos/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab_multi_Top/crab_DY_50_ext1
+ERROR 2019-11-19 04:08:51.586 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1911.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1911.patch1/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1911.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 277, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1911.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 599, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1911.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 461, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /cms/seg188/eos/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab_multi_Top/crab_DY_50_ext1

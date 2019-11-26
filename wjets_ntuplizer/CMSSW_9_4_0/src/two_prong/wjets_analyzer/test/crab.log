@@ -1,0 +1,1014 @@
+DEBUG 2019-09-26 00:35:19.161 UTC: 	 Executing command: 'status'
+DEBUG 2019-09-26 00:35:19.161 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-09-26 01:07:47.053 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2019-09-26 01:07:47.053 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-09-26 01:07:47.060 UTC: 	 Checking credentials
+DEBUG 2019-09-26 01:07:47.060 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:07:47.060 UTC: 	 Getting proxy life time left
+DEBUG 2019-09-26 01:07:47.163 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 3631
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:07:47.268 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 3630
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:07:47.268 UTC: 	 Proxy lifetime 3631 secs is different from voms extension lifetime 3630 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:07:47.268 UTC: 	 Proxy valid for 01:00:30 hours
+DEBUG 2019-09-26 01:07:47.380 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:07:47.380 UTC: 	 Checking credentials
+DEBUG 2019-09-26 01:07:47.381 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:07:47.381 UTC: 	 Getting proxy life time left
+DEBUG 2019-09-26 01:07:47.485 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 3631
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:07:47.589 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 3630
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:07:47.590 UTC: 	 Proxy lifetime 3631 secs is different from voms extension lifetime 3630 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:07:47.590 UTC: 	 Proxy valid for 01:00:30 hours
+DEBUG 2019-09-26 01:07:47.694 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/home/seg188/private/personal/voms_proxy.cert voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:07:47.695 UTC: 	 Command use: checkwrite
+DEBUG 2019-09-26 01:07:47.695 UTC: 	 Options use: ['--site=T3_US_Rutgers', '--lfn=/store/user/sgreenbe/cms_area']
+DEBUG 2019-09-26 01:07:47.695 UTC: 	 Instance is None
+DEBUG 2019-09-26 01:07:47.695 UTC: 	 Server base url is None
+INFO 2019-09-26 01:07:47.699 UTC: 	 Validating LFN /store/user/sgreenbe/cms_area...
+INFO 2019-09-26 01:07:47.700 UTC: 	 Retrieving DN from proxy...
+INFO 2019-09-26 01:07:47.897 UTC: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+INFO 2019-09-26 01:07:47.898 UTC: 	 Retrieving username for this DN...
+DEBUG 2019-09-26 01:07:47.898 UTC: 	 Retrieving username from SiteDB...
+DEBUG 2019-09-26 01:07:49.404 UTC: 	 Username is: sgreenbe
+DEBUG 2019-09-26 01:07:49.405 UTC: 	 Retrieving username from CRIC...
+DEBUG 2019-09-26 01:07:51.494 UTC: 	 Username is: sgreenbe
+INFO 2019-09-26 01:07:51.494 UTC: 	 username is sgreenbe
+INFO 2019-09-26 01:07:51.495 UTC: 	 LFN /store/user/sgreenbe/cms_area is valid.
+INFO 2019-09-26 01:07:51.504 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2019-09-26 01:07:51.506 UTC: 	 Will check write permission in /store/user/sgreenbe/cms_area on site T3_US_Rutgers
+INFO 2019-09-26 01:07:52.302 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20190925_210751 and copy (dummy) file crab3checkwrite_20190925_210751.tmp to /store/user/sgreenbe/cms_area
+
+INFO 2019-09-26 01:07:52.308 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190925_210751.tmp 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/cms_area/crab3checkwrite_20190925_210751/crab3checkwrite_20190925_210751.tmp'
+INFO 2019-09-26 01:07:52.311 UTC: 	 Please wait...
+INFO 2019-09-26 01:07:52.617 UTC: 	 Failed running copy command
+INFO 2019-09-26 01:07:52.617 UTC: 	   Stdout:
+    Copying 85 bytes file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190925_210751.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/cms_area/crab3checkwrite_20190925_210751/crab3checkwrite_20190925_210751.tmp
+    event: [1569460072599] BOTH   GFAL2:CORE:COPY	LIST:ENTER	
+    event: [1569460072599] BOTH   GFAL2:CORE:COPY	LIST:ITEM	file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190925_210751.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/cms_area/crab3checkwrite_20190925_210751/crab3checkwrite_20190925_210751.tmp
+    event: [1569460072599] BOTH   GFAL2:CORE:COPY	LIST:EXIT	
+    
+INFO 2019-09-26 01:07:52.617 UTC: 	   Stderr:
+    gfal-copy error: 70 (Communication error on send) - globus_ftp_client: the server responded with an error 421 Service busy: Connection limit exceeded. Please try again later. Closing control connection.   
+    
+INFO 2019-09-26 01:07:52.618 UTC: 	 
+Checkwrite Result:
+INFO 2019-09-26 01:07:52.618 UTC: 	 Unable to check write permission in /store/user/sgreenbe/cms_area on site T3_US_Rutgers
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2019-09-26 01:07:52.618 UTC: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2019-09-26 01:08:06.008 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2019-09-26 01:08:06.008 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-09-26 01:08:06.013 UTC: 	 Checking credentials
+DEBUG 2019-09-26 01:08:06.013 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:08:06.013 UTC: 	 Getting proxy life time left
+DEBUG 2019-09-26 01:08:06.116 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 3612
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:06.220 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 3611
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:06.220 UTC: 	 Proxy lifetime 3612 secs is different from voms extension lifetime 3611 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:08:06.221 UTC: 	 Proxy valid for 01:00:11 hours
+DEBUG 2019-09-26 01:08:06.333 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:06.333 UTC: 	 Checking credentials
+DEBUG 2019-09-26 01:08:06.333 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:08:06.333 UTC: 	 Getting proxy life time left
+DEBUG 2019-09-26 01:08:06.437 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 3612
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:06.542 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 3611
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:06.542 UTC: 	 Proxy lifetime 3612 secs is different from voms extension lifetime 3611 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:08:06.543 UTC: 	 Proxy valid for 01:00:11 hours
+DEBUG 2019-09-26 01:08:06.647 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/home/seg188/private/personal/voms_proxy.cert voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:06.648 UTC: 	 Command use: checkwrite
+DEBUG 2019-09-26 01:08:06.648 UTC: 	 Options use: ['--site=T3_US_Rutgers', '--lfn=/store/user/sgreenbe/cms_area']
+DEBUG 2019-09-26 01:08:06.648 UTC: 	 Instance is None
+DEBUG 2019-09-26 01:08:06.648 UTC: 	 Server base url is None
+INFO 2019-09-26 01:08:06.652 UTC: 	 Validating LFN /store/user/sgreenbe/cms_area...
+INFO 2019-09-26 01:08:06.652 UTC: 	 Retrieving DN from proxy...
+INFO 2019-09-26 01:08:06.851 UTC: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+INFO 2019-09-26 01:08:06.851 UTC: 	 Retrieving username for this DN...
+DEBUG 2019-09-26 01:08:06.851 UTC: 	 Retrieving username from SiteDB...
+DEBUG 2019-09-26 01:08:08.158 UTC: 	 Username is: sgreenbe
+DEBUG 2019-09-26 01:08:08.158 UTC: 	 Retrieving username from CRIC...
+DEBUG 2019-09-26 01:08:13.377 UTC: 	 Username is: sgreenbe
+INFO 2019-09-26 01:08:13.378 UTC: 	 username is sgreenbe
+INFO 2019-09-26 01:08:13.378 UTC: 	 LFN /store/user/sgreenbe/cms_area is valid.
+INFO 2019-09-26 01:08:13.387 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2019-09-26 01:08:13.389 UTC: 	 Will check write permission in /store/user/sgreenbe/cms_area on site T3_US_Rutgers
+INFO 2019-09-26 01:08:14.168 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20190925_210813 and copy (dummy) file crab3checkwrite_20190925_210813.tmp to /store/user/sgreenbe/cms_area
+
+INFO 2019-09-26 01:08:14.173 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190925_210813.tmp 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/cms_area/crab3checkwrite_20190925_210813/crab3checkwrite_20190925_210813.tmp'
+INFO 2019-09-26 01:08:14.176 UTC: 	 Please wait...
+INFO 2019-09-26 01:08:14.461 UTC: 	 Failed running copy command
+INFO 2019-09-26 01:08:14.462 UTC: 	   Stdout:
+    Copying 85 bytes file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190925_210813.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/cms_area/crab3checkwrite_20190925_210813/crab3checkwrite_20190925_210813.tmp
+    event: [1569460094444] BOTH   GFAL2:CORE:COPY	LIST:ENTER	
+    event: [1569460094444] BOTH   GFAL2:CORE:COPY	LIST:ITEM	file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190925_210813.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/cms_area/crab3checkwrite_20190925_210813/crab3checkwrite_20190925_210813.tmp
+    event: [1569460094444] BOTH   GFAL2:CORE:COPY	LIST:EXIT	
+    
+INFO 2019-09-26 01:08:14.462 UTC: 	   Stderr:
+    gfal-copy error: 70 (Communication error on send) - globus_ftp_client: the server responded with an error 421 Service busy: Connection limit exceeded. Please try again later. Closing control connection.   
+    
+INFO 2019-09-26 01:08:14.462 UTC: 	 
+Checkwrite Result:
+INFO 2019-09-26 01:08:14.462 UTC: 	 Unable to check write permission in /store/user/sgreenbe/cms_area on site T3_US_Rutgers
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2019-09-26 01:08:14.462 UTC: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2019-09-26 01:08:33.124 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2019-09-26 01:08:33.124 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-09-26 01:08:33.131 UTC: 	 Checking credentials
+DEBUG 2019-09-26 01:08:33.131 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:08:33.131 UTC: 	 Getting proxy life time left
+DEBUG 2019-09-26 01:08:33.234 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 3585
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:33.339 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 3584
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:33.339 UTC: 	 Proxy lifetime 3585 secs is different from voms extension lifetime 3584 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:08:33.339 UTC: 	 Proxy valid for 00:59:44 hours
+DEBUG 2019-09-26 01:08:33.451 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:33.451 UTC: 	 Checking credentials
+DEBUG 2019-09-26 01:08:33.452 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:08:33.452 UTC: 	 Getting proxy life time left
+DEBUG 2019-09-26 01:08:33.556 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 3585
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:33.661 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 3584
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:33.661 UTC: 	 Proxy lifetime 3585 secs is different from voms extension lifetime 3584 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-26 01:08:33.661 UTC: 	 Proxy valid for 00:59:44 hours
+DEBUG 2019-09-26 01:08:33.765 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/home/seg188/private/personal/voms_proxy.cert voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-26 01:08:33.766 UTC: 	 Command use: checkwrite
+DEBUG 2019-09-26 01:08:33.766 UTC: 	 Options use: ['--site=T3_US_Rutgers', '--lfn=/store/user/sgreenbe/cms_area']
+DEBUG 2019-09-26 01:08:33.766 UTC: 	 Instance is None
+DEBUG 2019-09-26 01:08:33.767 UTC: 	 Server base url is None
+INFO 2019-09-26 01:08:33.771 UTC: 	 Validating LFN /store/user/sgreenbe/cms_area...
+INFO 2019-09-26 01:08:33.771 UTC: 	 Retrieving DN from proxy...
+INFO 2019-09-26 01:08:33.974 UTC: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+INFO 2019-09-26 01:08:33.974 UTC: 	 Retrieving username for this DN...
+DEBUG 2019-09-26 01:08:33.974 UTC: 	 Retrieving username from SiteDB...
+DEBUG 2019-09-26 01:08:35.349 UTC: 	 Username is: sgreenbe
+DEBUG 2019-09-26 01:08:35.349 UTC: 	 Retrieving username from CRIC...
+DEBUG 2019-09-26 01:08:37.445 UTC: 	 Username is: sgreenbe
+INFO 2019-09-26 01:08:37.445 UTC: 	 username is sgreenbe
+INFO 2019-09-26 01:08:37.445 UTC: 	 LFN /store/user/sgreenbe/cms_area is valid.
+INFO 2019-09-26 01:08:37.454 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2019-09-26 01:08:37.457 UTC: 	 Will check write permission in /store/user/sgreenbe/cms_area on site T3_US_Rutgers
+INFO 2019-09-26 01:08:38.233 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20190925_210837 and copy (dummy) file crab3checkwrite_20190925_210837.tmp to /store/user/sgreenbe/cms_area
+
+INFO 2019-09-26 01:08:38.239 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190925_210837.tmp 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/cms_area/crab3checkwrite_20190925_210837/crab3checkwrite_20190925_210837.tmp'
+INFO 2019-09-26 01:08:38.242 UTC: 	 Please wait...
+INFO 2019-09-26 01:08:38.554 UTC: 	 Failed running copy command
+INFO 2019-09-26 01:08:38.554 UTC: 	   Stdout:
+    Copying 85 bytes file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190925_210837.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/cms_area/crab3checkwrite_20190925_210837/crab3checkwrite_20190925_210837.tmp
+    event: [1569460118537] BOTH   GFAL2:CORE:COPY	LIST:ENTER	
+    event: [1569460118537] BOTH   GFAL2:CORE:COPY	LIST:ITEM	file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190925_210837.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/cms_area/crab3checkwrite_20190925_210837/crab3checkwrite_20190925_210837.tmp
+    event: [1569460118537] BOTH   GFAL2:CORE:COPY	LIST:EXIT	
+    
+INFO 2019-09-26 01:08:38.554 UTC: 	   Stderr:
+    gfal-copy error: 70 (Communication error on send) - globus_ftp_client: the server responded with an error 421 Service busy: Connection limit exceeded. Please try again later. Closing control connection.   
+    
+INFO 2019-09-26 01:08:38.555 UTC: 	 
+Checkwrite Result:
+INFO 2019-09-26 01:08:38.555 UTC: 	 Unable to check write permission in /store/user/sgreenbe/cms_area on site T3_US_Rutgers
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2019-09-26 01:08:38.555 UTC: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2019-09-27 01:17:00.250 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2019-09-27 01:17:00.250 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-09-27 01:17:00.255 UTC: 	 Checking credentials
+DEBUG 2019-09-27 01:17:00.255 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-27 01:17:00.255 UTC: 	 Getting proxy life time left
+DEBUG 2019-09-27 01:17:00.357 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 47130
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 01:17:00.460 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 47130
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 01:17:00.460 UTC: 	 Proxy valid for 13:05:30 hours
+DEBUG 2019-09-27 01:17:00.571 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 01:17:00.571 UTC: 	 Checking credentials
+DEBUG 2019-09-27 01:17:00.572 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-27 01:17:00.572 UTC: 	 Getting proxy life time left
+DEBUG 2019-09-27 01:17:00.676 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 47130
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 01:17:00.780 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 47130
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 01:17:00.780 UTC: 	 Proxy valid for 13:05:30 hours
+DEBUG 2019-09-27 01:17:00.884 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/home/seg188/private/personal/voms_proxy.cert voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 01:17:00.885 UTC: 	 Command use: checkwrite
+DEBUG 2019-09-27 01:17:00.885 UTC: 	 Options use: ['--site=T3_US_Rutgers']
+DEBUG 2019-09-27 01:17:00.885 UTC: 	 Instance is None
+DEBUG 2019-09-27 01:17:00.885 UTC: 	 Server base url is None
+INFO 2019-09-27 01:17:00.889 UTC: 	 Will check write permission in the default location /store/user/<username>
+INFO 2019-09-27 01:17:00.889 UTC: 	 Retrieving DN from proxy...
+INFO 2019-09-27 01:17:01.105 UTC: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+INFO 2019-09-27 01:17:01.105 UTC: 	 Retrieving username for this DN...
+DEBUG 2019-09-27 01:17:01.106 UTC: 	 Retrieving username from SiteDB...
+DEBUG 2019-09-27 01:17:02.383 UTC: 	 Username is: sgreenbe
+DEBUG 2019-09-27 01:17:02.383 UTC: 	 Retrieving username from CRIC...
+DEBUG 2019-09-27 01:17:04.573 UTC: 	 Username is: sgreenbe
+INFO 2019-09-27 01:17:04.574 UTC: 	 username is sgreenbe
+INFO 2019-09-27 01:17:04.574 UTC: 	 Validating LFN /store/user/sgreenbe...
+INFO 2019-09-27 01:17:04.574 UTC: 	 LFN /store/user/sgreenbe is valid.
+INFO 2019-09-27 01:17:04.585 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2019-09-27 01:17:04.587 UTC: 	 Will check write permission in /store/user/sgreenbe on site T3_US_Rutgers
+INFO 2019-09-27 01:17:05.363 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20190926_211704 and copy (dummy) file crab3checkwrite_20190926_211704.tmp to /store/user/sgreenbe
+
+INFO 2019-09-27 01:17:05.369 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190926_211704.tmp 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190926_211704/crab3checkwrite_20190926_211704.tmp'
+INFO 2019-09-27 01:17:05.371 UTC: 	 Please wait...
+INFO 2019-09-27 01:17:06.382 UTC: 	 
+Successfully created directory crab3checkwrite_20190926_211704 and copied file crab3checkwrite_20190926_211704.tmp to /store/user/sgreenbe
+INFO 2019-09-27 01:17:06.383 UTC: 	 
+Attempting to delete file gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190926_211704/crab3checkwrite_20190926_211704.tmp
+
+INFO 2019-09-27 01:17:06.383 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -v -t 180 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190926_211704/crab3checkwrite_20190926_211704.tmp'
+INFO 2019-09-27 01:17:06.383 UTC: 	 Please wait...
+INFO 2019-09-27 01:17:07.140 UTC: 	 
+Successfully deleted file gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190926_211704/crab3checkwrite_20190926_211704.tmp
+INFO 2019-09-27 01:17:07.140 UTC: 	 
+Attempting to delete directory gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190926_211704/
+
+INFO 2019-09-27 01:17:07.141 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -r -v -t 180 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190926_211704/'
+INFO 2019-09-27 01:17:07.141 UTC: 	 Please wait...
+INFO 2019-09-27 01:17:07.895 UTC: 	 
+Successfully deleted directory gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190926_211704/
+INFO 2019-09-27 01:17:07.896 UTC: 	 
+Checkwrite Result:
+INFO 2019-09-27 01:17:07.896 UTC: 	 Success: Able to write in /store/user/sgreenbe on site T3_US_Rutgers
+DEBUG 2019-09-27 13:20:57.080 UTC: 	 Executing command: 'status'
+DEBUG 2019-09-27 13:20:57.080 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+ERROR 2019-09-27 13:20:57.080 UTC: 	 Error: crab_multi_wjets_2016_sept26/crab_W1JetsToLNu--verboseErrors is not a valid CRAB project directory.
+ERROR 2019-09-27 13:20:57.080 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 40, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 268, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 586, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_multi_wjets_2016_sept26/crab_W1JetsToLNu--verboseErrors is not a valid CRAB project directory.
+DEBUG 2019-09-27 22:43:00.338 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2019-09-27 22:43:00.338 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-09-27 22:43:00.345 UTC: 	 Checking credentials
+DEBUG 2019-09-27 22:43:00.346 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-27 22:43:00.346 UTC: 	 Getting proxy life time left
+DEBUG 2019-09-27 22:43:00.449 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 61747
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 22:43:00.554 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 61747
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 22:43:00.554 UTC: 	 Proxy valid for 17:09:07 hours
+DEBUG 2019-09-27 22:43:00.666 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 22:43:00.666 UTC: 	 Checking credentials
+DEBUG 2019-09-27 22:43:00.667 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-09-27 22:43:00.667 UTC: 	 Getting proxy life time left
+DEBUG 2019-09-27 22:43:00.771 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 61747
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 22:43:00.875 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 61747
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 22:43:00.876 UTC: 	 Proxy valid for 17:09:07 hours
+DEBUG 2019-09-27 22:43:00.980 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/home/seg188/private/personal/voms_proxy.cert voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-09-27 22:43:00.981 UTC: 	 Command use: checkwrite
+DEBUG 2019-09-27 22:43:00.981 UTC: 	 Options use: ['--site=T3_US_Rutgers']
+DEBUG 2019-09-27 22:43:00.981 UTC: 	 Instance is None
+DEBUG 2019-09-27 22:43:00.981 UTC: 	 Server base url is None
+INFO 2019-09-27 22:43:00.986 UTC: 	 Will check write permission in the default location /store/user/<username>
+INFO 2019-09-27 22:43:00.986 UTC: 	 Retrieving DN from proxy...
+INFO 2019-09-27 22:43:01.231 UTC: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+INFO 2019-09-27 22:43:01.231 UTC: 	 Retrieving username for this DN...
+DEBUG 2019-09-27 22:43:01.231 UTC: 	 Retrieving username from SiteDB...
+DEBUG 2019-09-27 22:43:02.548 UTC: 	 Username is: sgreenbe
+DEBUG 2019-09-27 22:43:02.548 UTC: 	 Retrieving username from CRIC...
+DEBUG 2019-09-27 22:43:05.137 UTC: 	 Username is: sgreenbe
+INFO 2019-09-27 22:43:05.137 UTC: 	 username is sgreenbe
+INFO 2019-09-27 22:43:05.138 UTC: 	 Validating LFN /store/user/sgreenbe...
+INFO 2019-09-27 22:43:05.138 UTC: 	 LFN /store/user/sgreenbe is valid.
+INFO 2019-09-27 22:43:05.148 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2019-09-27 22:43:05.150 UTC: 	 Will check write permission in /store/user/sgreenbe on site T3_US_Rutgers
+INFO 2019-09-27 22:43:05.965 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20190927_184305 and copy (dummy) file crab3checkwrite_20190927_184305.tmp to /store/user/sgreenbe
+
+INFO 2019-09-27 22:43:05.970 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20190927_184305.tmp 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190927_184305/crab3checkwrite_20190927_184305.tmp'
+INFO 2019-09-27 22:43:05.973 UTC: 	 Please wait...
+INFO 2019-09-27 22:43:07.005 UTC: 	 
+Successfully created directory crab3checkwrite_20190927_184305 and copied file crab3checkwrite_20190927_184305.tmp to /store/user/sgreenbe
+INFO 2019-09-27 22:43:07.006 UTC: 	 
+Attempting to delete file gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190927_184305/crab3checkwrite_20190927_184305.tmp
+
+INFO 2019-09-27 22:43:07.006 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -v -t 180 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190927_184305/crab3checkwrite_20190927_184305.tmp'
+INFO 2019-09-27 22:43:07.006 UTC: 	 Please wait...
+INFO 2019-09-27 22:43:07.661 UTC: 	 
+Successfully deleted file gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190927_184305/crab3checkwrite_20190927_184305.tmp
+INFO 2019-09-27 22:43:07.662 UTC: 	 
+Attempting to delete directory gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190927_184305/
+
+INFO 2019-09-27 22:43:07.662 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -r -v -t 180 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190927_184305/'
+INFO 2019-09-27 22:43:07.662 UTC: 	 Please wait...
+INFO 2019-09-27 22:43:08.341 UTC: 	 
+Successfully deleted directory gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20190927_184305/
+INFO 2019-09-27 22:43:08.341 UTC: 	 
+Checkwrite Result:
+INFO 2019-09-27 22:43:08.341 UTC: 	 Success: Able to write in /store/user/sgreenbe on site T3_US_Rutgers
+DEBUG 2019-10-01 14:18:39.334 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2019-10-01 14:18:39.334 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-01 14:18:39.341 UTC: 	 Checking credentials
+DEBUG 2019-10-01 14:18:39.341 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 14:18:39.341 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-01 14:18:39.444 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 1866
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:18:39.548 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 1865
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:18:39.549 UTC: 	 Proxy lifetime 1866 secs is different from voms extension lifetime 1865 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 14:18:39.549 UTC: 	 Proxy valid for 00:31:05 hours
+DEBUG 2019-10-01 14:18:39.661 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:18:39.661 UTC: 	 Checking credentials
+DEBUG 2019-10-01 14:18:39.662 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 14:18:39.662 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-01 14:18:39.766 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 1866
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:18:39.871 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 1865
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:18:39.871 UTC: 	 Proxy lifetime 1866 secs is different from voms extension lifetime 1865 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 14:18:39.871 UTC: 	 Proxy valid for 00:31:05 hours
+DEBUG 2019-10-01 14:18:39.976 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/home/seg188/private/personal/voms_proxy.cert voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:18:39.977 UTC: 	 Command use: checkwrite
+DEBUG 2019-10-01 14:18:39.977 UTC: 	 Options use: ['--site=T3_US_Rutgers']
+DEBUG 2019-10-01 14:18:39.977 UTC: 	 Instance is None
+DEBUG 2019-10-01 14:18:39.977 UTC: 	 Server base url is None
+INFO 2019-10-01 14:18:39.981 UTC: 	 Will check write permission in the default location /store/user/<username>
+INFO 2019-10-01 14:18:39.981 UTC: 	 Retrieving DN from proxy...
+INFO 2019-10-01 14:18:40.207 UTC: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+INFO 2019-10-01 14:18:40.207 UTC: 	 Retrieving username for this DN...
+DEBUG 2019-10-01 14:18:40.207 UTC: 	 Retrieving username from SiteDB...
+DEBUG 2019-10-01 14:18:41.481 UTC: 	 Username is: sgreenbe
+DEBUG 2019-10-01 14:18:41.482 UTC: 	 Retrieving username from CRIC...
+DEBUG 2019-10-01 14:18:43.735 UTC: 	 Username is: sgreenbe
+INFO 2019-10-01 14:18:43.735 UTC: 	 username is sgreenbe
+INFO 2019-10-01 14:18:43.735 UTC: 	 Validating LFN /store/user/sgreenbe...
+INFO 2019-10-01 14:18:43.735 UTC: 	 LFN /store/user/sgreenbe is valid.
+INFO 2019-10-01 14:18:43.746 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2019-10-01 14:18:43.748 UTC: 	 Will check write permission in /store/user/sgreenbe on site T3_US_Rutgers
+INFO 2019-10-01 14:18:44.532 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20191001_101843 and copy (dummy) file crab3checkwrite_20191001_101843.tmp to /store/user/sgreenbe
+
+INFO 2019-10-01 14:18:44.537 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20191001_101843.tmp 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_101843/crab3checkwrite_20191001_101843.tmp'
+INFO 2019-10-01 14:18:44.540 UTC: 	 Please wait...
+INFO 2019-10-01 14:18:45.251 UTC: 	 Failed running copy command
+INFO 2019-10-01 14:18:45.251 UTC: 	   Stdout:
+    Copying 85 bytes file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20191001_101843.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_101843/crab3checkwrite_20191001_101843.tmp
+    event: [1569939525199] BOTH   GFAL2:CORE:COPY	LIST:ENTER	
+    event: [1569939525199] BOTH   GFAL2:CORE:COPY	LIST:ITEM	file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20191001_101843.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_101843/crab3checkwrite_20191001_101843.tmp
+    event: [1569939525199] BOTH   GFAL2:CORE:COPY	LIST:EXIT	
+    
+INFO 2019-10-01 14:18:45.252 UTC: 	   Stderr:
+    gfal-copy error: 70 (Communication error on send) - globus_ftp_client: the server responded with an error 451 451-GlobusError: v=1 c=INTERNAL_ERROR  451-GridFTP-Errno: 5  451-GridFTP-Reason: System error in stat  451-GridFTP-Error-String: Input/output error  451 End.   
+    
+INFO 2019-10-01 14:18:45.252 UTC: 	 
+Checkwrite Result:
+INFO 2019-10-01 14:18:45.252 UTC: 	 Unable to check write permission in /store/user/sgreenbe on site T3_US_Rutgers
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2019-10-01 14:18:45.252 UTC: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2019-10-01 14:19:18.804 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2019-10-01 14:19:18.804 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-01 14:19:18.813 UTC: 	 Checking credentials
+DEBUG 2019-10-01 14:19:18.813 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 14:19:18.813 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-01 14:19:18.917 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 1827
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:19:19.022 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 1826
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:19:19.022 UTC: 	 Proxy lifetime 1827 secs is different from voms extension lifetime 1826 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 14:19:19.022 UTC: 	 Proxy valid for 00:30:26 hours
+DEBUG 2019-10-01 14:19:19.134 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:19:19.135 UTC: 	 Checking credentials
+DEBUG 2019-10-01 14:19:19.135 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 14:19:19.135 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-01 14:19:19.239 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 1826
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:19:19.344 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 1825
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:19:19.344 UTC: 	 Proxy lifetime 1826 secs is different from voms extension lifetime 1825 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 14:19:19.344 UTC: 	 Proxy valid for 00:30:25 hours
+DEBUG 2019-10-01 14:19:19.449 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/home/seg188/private/personal/voms_proxy.cert voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:19:19.450 UTC: 	 Command use: checkwrite
+DEBUG 2019-10-01 14:19:19.450 UTC: 	 Options use: ['--site=T3_US_Rutgers']
+DEBUG 2019-10-01 14:19:19.450 UTC: 	 Instance is None
+DEBUG 2019-10-01 14:19:19.450 UTC: 	 Server base url is None
+INFO 2019-10-01 14:19:19.454 UTC: 	 Will check write permission in the default location /store/user/<username>
+INFO 2019-10-01 14:19:19.454 UTC: 	 Retrieving DN from proxy...
+INFO 2019-10-01 14:19:19.654 UTC: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+INFO 2019-10-01 14:19:19.654 UTC: 	 Retrieving username for this DN...
+DEBUG 2019-10-01 14:19:19.654 UTC: 	 Retrieving username from SiteDB...
+DEBUG 2019-10-01 14:19:21.021 UTC: 	 Username is: sgreenbe
+DEBUG 2019-10-01 14:19:21.021 UTC: 	 Retrieving username from CRIC...
+DEBUG 2019-10-01 14:19:23.020 UTC: 	 Username is: sgreenbe
+INFO 2019-10-01 14:19:23.020 UTC: 	 username is sgreenbe
+INFO 2019-10-01 14:19:23.020 UTC: 	 Validating LFN /store/user/sgreenbe...
+INFO 2019-10-01 14:19:23.020 UTC: 	 LFN /store/user/sgreenbe is valid.
+INFO 2019-10-01 14:19:23.030 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2019-10-01 14:19:23.032 UTC: 	 Will check write permission in /store/user/sgreenbe on site T3_US_Rutgers
+INFO 2019-10-01 14:19:23.811 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20191001_101923 and copy (dummy) file crab3checkwrite_20191001_101923.tmp to /store/user/sgreenbe
+
+INFO 2019-10-01 14:19:23.816 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20191001_101923.tmp 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_101923/crab3checkwrite_20191001_101923.tmp'
+INFO 2019-10-01 14:19:23.819 UTC: 	 Please wait...
+INFO 2019-10-01 14:19:24.417 UTC: 	 Failed running copy command
+INFO 2019-10-01 14:19:24.417 UTC: 	   Stdout:
+    Copying 85 bytes file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20191001_101923.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_101923/crab3checkwrite_20191001_101923.tmp
+    event: [1569939564391] BOTH   GFAL2:CORE:COPY	LIST:ENTER	
+    event: [1569939564391] BOTH   GFAL2:CORE:COPY	LIST:ITEM	file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20191001_101923.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_101923/crab3checkwrite_20191001_101923.tmp
+    event: [1569939564392] BOTH   GFAL2:CORE:COPY	LIST:EXIT	
+    
+INFO 2019-10-01 14:19:24.417 UTC: 	   Stderr:
+    gfal-copy error: 70 (Communication error on send) - globus_ftp_client: the server responded with an error 451 451-GlobusError: v=1 c=INTERNAL_ERROR  451-GridFTP-Errno: 5  451-GridFTP-Reason: System error in stat  451-GridFTP-Error-String: Input/output error  451 End.   
+    
+INFO 2019-10-01 14:19:24.418 UTC: 	 
+Checkwrite Result:
+INFO 2019-10-01 14:19:24.418 UTC: 	 Unable to check write permission in /store/user/sgreenbe on site T3_US_Rutgers
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2019-10-01 14:19:24.418 UTC: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2019-10-01 14:21:20.608 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2019-10-01 14:21:20.609 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-01 14:21:20.615 UTC: 	 Checking credentials
+DEBUG 2019-10-01 14:21:20.615 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 14:21:20.615 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-01 14:21:20.718 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 43195
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:21:20.822 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 43195
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:21:20.823 UTC: 	 Proxy valid for 11:59:55 hours
+DEBUG 2019-10-01 14:21:20.935 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:21:20.935 UTC: 	 Checking credentials
+DEBUG 2019-10-01 14:21:20.935 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 14:21:20.935 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-01 14:21:21.040 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 43194
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:21:21.144 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 43194
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:21:21.145 UTC: 	 Proxy valid for 11:59:54 hours
+DEBUG 2019-10-01 14:21:21.249 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/home/seg188/private/personal/voms_proxy.cert voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 14:21:21.250 UTC: 	 Command use: checkwrite
+DEBUG 2019-10-01 14:21:21.250 UTC: 	 Options use: ['--site=T3_US_Rutgers']
+DEBUG 2019-10-01 14:21:21.250 UTC: 	 Instance is None
+DEBUG 2019-10-01 14:21:21.250 UTC: 	 Server base url is None
+INFO 2019-10-01 14:21:21.254 UTC: 	 Will check write permission in the default location /store/user/<username>
+INFO 2019-10-01 14:21:21.254 UTC: 	 Retrieving DN from proxy...
+INFO 2019-10-01 14:21:21.475 UTC: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+INFO 2019-10-01 14:21:21.476 UTC: 	 Retrieving username for this DN...
+DEBUG 2019-10-01 14:21:21.476 UTC: 	 Retrieving username from SiteDB...
+DEBUG 2019-10-01 14:21:22.947 UTC: 	 Username is: sgreenbe
+DEBUG 2019-10-01 14:21:22.948 UTC: 	 Retrieving username from CRIC...
+DEBUG 2019-10-01 14:21:25.032 UTC: 	 Username is: sgreenbe
+INFO 2019-10-01 14:21:25.033 UTC: 	 username is sgreenbe
+INFO 2019-10-01 14:21:25.033 UTC: 	 Validating LFN /store/user/sgreenbe...
+INFO 2019-10-01 14:21:25.033 UTC: 	 LFN /store/user/sgreenbe is valid.
+INFO 2019-10-01 14:21:25.041 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2019-10-01 14:21:25.043 UTC: 	 Will check write permission in /store/user/sgreenbe on site T3_US_Rutgers
+INFO 2019-10-01 14:21:25.845 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20191001_102125 and copy (dummy) file crab3checkwrite_20191001_102125.tmp to /store/user/sgreenbe
+
+INFO 2019-10-01 14:21:25.849 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20191001_102125.tmp 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_102125/crab3checkwrite_20191001_102125.tmp'
+INFO 2019-10-01 14:21:25.851 UTC: 	 Please wait...
+INFO 2019-10-01 14:21:26.466 UTC: 	 Failed running copy command
+INFO 2019-10-01 14:21:26.466 UTC: 	   Stdout:
+    Copying 85 bytes file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20191001_102125.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_102125/crab3checkwrite_20191001_102125.tmp
+    event: [1569939686437] BOTH   GFAL2:CORE:COPY	LIST:ENTER	
+    event: [1569939686437] BOTH   GFAL2:CORE:COPY	LIST:ITEM	file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20191001_102125.tmp => gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_102125/crab3checkwrite_20191001_102125.tmp
+    event: [1569939686437] BOTH   GFAL2:CORE:COPY	LIST:EXIT	
+    
+INFO 2019-10-01 14:21:26.466 UTC: 	   Stderr:
+    gfal-copy error: 70 (Communication error on send) - globus_ftp_client: the server responded with an error 451 451-GlobusError: v=1 c=INTERNAL_ERROR  451-GridFTP-Errno: 5  451-GridFTP-Reason: System error in stat  451-GridFTP-Error-String: Input/output error  451 End.   
+    
+INFO 2019-10-01 14:21:26.467 UTC: 	 
+Checkwrite Result:
+INFO 2019-10-01 14:21:26.467 UTC: 	 Unable to check write permission in /store/user/sgreenbe on site T3_US_Rutgers
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2019-10-01 14:21:26.467 UTC: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2019-10-01 15:51:42.316 UTC: 	 Executing command: 'checkwrite'
+DEBUG 2019-10-01 15:51:42.316 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-01 15:51:42.319 UTC: 	 Checking credentials
+DEBUG 2019-10-01 15:51:42.320 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 15:51:42.320 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-01 15:51:42.421 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 37773
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 15:51:42.523 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 37773
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 15:51:42.523 UTC: 	 Proxy valid for 10:29:33 hours
+DEBUG 2019-10-01 15:51:42.628 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 15:51:42.628 UTC: 	 Checking credentials
+DEBUG 2019-10-01 15:51:42.628 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 15:51:42.628 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-01 15:51:42.730 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 37773
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 15:51:42.832 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 37773
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 15:51:42.832 UTC: 	 Proxy valid for 10:29:33 hours
+DEBUG 2019-10-01 15:51:42.934 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/home/seg188/private/personal/voms_proxy.cert voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 15:51:42.934 UTC: 	 Command use: checkwrite
+DEBUG 2019-10-01 15:51:42.934 UTC: 	 Options use: ['--site=T3_US_Rutgers']
+DEBUG 2019-10-01 15:51:42.934 UTC: 	 Instance is None
+DEBUG 2019-10-01 15:51:42.934 UTC: 	 Server base url is None
+INFO 2019-10-01 15:51:42.936 UTC: 	 Will check write permission in the default location /store/user/<username>
+INFO 2019-10-01 15:51:42.936 UTC: 	 Retrieving DN from proxy...
+INFO 2019-10-01 15:51:43.045 UTC: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=sgreenbe/CN=836894/CN=Stephen Elliott Greenberg
+INFO 2019-10-01 15:51:43.045 UTC: 	 Retrieving username for this DN...
+DEBUG 2019-10-01 15:51:43.045 UTC: 	 Retrieving username from SiteDB...
+DEBUG 2019-10-01 15:51:44.229 UTC: 	 Username is: sgreenbe
+DEBUG 2019-10-01 15:51:44.229 UTC: 	 Retrieving username from CRIC...
+DEBUG 2019-10-01 15:51:46.293 UTC: 	 Username is: sgreenbe
+INFO 2019-10-01 15:51:46.293 UTC: 	 username is sgreenbe
+INFO 2019-10-01 15:51:46.293 UTC: 	 Validating LFN /store/user/sgreenbe...
+INFO 2019-10-01 15:51:46.293 UTC: 	 LFN /store/user/sgreenbe is valid.
+INFO 2019-10-01 15:51:46.298 UTC: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2019-10-01 15:51:46.299 UTC: 	 Will check write permission in /store/user/sgreenbe on site T3_US_Rutgers
+INFO 2019-10-01 15:51:47.080 UTC: 	 
+Attempting to create (dummy) directory crab3checkwrite_20191001_115146 and copy (dummy) file crab3checkwrite_20191001_115146.tmp to /store/user/sgreenbe
+
+INFO 2019-10-01 15:51:47.083 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-copy -p -v -t 180 file:///users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab3checkwrite_20191001_115146.tmp 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_115146/crab3checkwrite_20191001_115146.tmp'
+INFO 2019-10-01 15:51:47.084 UTC: 	 Please wait...
+INFO 2019-10-01 15:51:47.672 UTC: 	 
+Successfully created directory crab3checkwrite_20191001_115146 and copied file crab3checkwrite_20191001_115146.tmp to /store/user/sgreenbe
+INFO 2019-10-01 15:51:47.673 UTC: 	 
+Attempting to delete file gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_115146/crab3checkwrite_20191001_115146.tmp
+
+INFO 2019-10-01 15:51:47.673 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -v -t 180 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_115146/crab3checkwrite_20191001_115146.tmp'
+INFO 2019-10-01 15:51:47.673 UTC: 	 Please wait...
+INFO 2019-10-01 15:51:48.206 UTC: 	 
+Successfully deleted file gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_115146/crab3checkwrite_20191001_115146.tmp
+INFO 2019-10-01 15:51:48.206 UTC: 	 
+Attempting to delete directory gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_115146/
+
+INFO 2019-10-01 15:51:48.206 UTC: 	 Executing command: which scram >/dev/null 2>&1 && eval `scram unsetenv -sh`; gfal-rm -r -v -t 180 'gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_115146/'
+INFO 2019-10-01 15:51:48.206 UTC: 	 Please wait...
+INFO 2019-10-01 15:51:48.787 UTC: 	 
+Successfully deleted directory gsiftp://ruhex-osgce.rutgers.edu/cms/se/phedex/store/user/sgreenbe/crab3checkwrite_20191001_115146/
+INFO 2019-10-01 15:51:48.787 UTC: 	 
+Checkwrite Result:
+INFO 2019-10-01 15:51:48.787 UTC: 	 Success: Able to write in /store/user/sgreenbe on site T3_US_Rutgers
+DEBUG 2019-10-01 15:59:41.094 UTC: 	 Executing command: 'submit'
+DEBUG 2019-10-01 15:59:41.095 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-01 16:02:39.662 UTC: 	 Executing command: 'status'
+DEBUG 2019-10-01 16:02:39.662 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-01 16:07:38.876 UTC: 	 Executing command: 'status'
+DEBUG 2019-10-01 16:07:38.876 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+ERROR 2019-10-01 16:07:38.877 UTC: 	 Cannot find .requestcache file in CRAB project directory /users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab_multi_wjets_2016_sept30
+ERROR 2019-10-01 16:07:38.877 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 40, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 268, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 590, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 452, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /users/h2/seg188/wjets_twoprongAnalysis/wjets_ntuplizer/CMSSW_9_4_0/src/two_prong/wjets_analyzer/test/crab_multi_wjets_2016_sept30
+DEBUG 2019-10-01 23:29:32.182 UTC: 	 Executing command: 'submit'
+DEBUG 2019-10-01 23:29:32.184 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-01 23:29:32.207 UTC: 	 Checking credentials
+DEBUG 2019-10-01 23:29:32.207 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 23:29:32.207 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-01 23:29:32.328 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 10303
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 23:29:32.434 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 10303
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 23:29:32.434 UTC: 	 Proxy valid for 02:51:43 hours
+DEBUG 2019-10-01 23:29:32.435 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-10-01 23:29:32.436 UTC: 	 Executing command: 'submit'
+DEBUG 2019-10-01 23:29:32.436 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-01 23:29:32.464 UTC: 	 Checking credentials
+DEBUG 2019-10-01 23:29:32.464 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-01 23:29:32.464 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-01 23:29:32.578 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 10303
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 23:29:32.680 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 10303
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-01 23:29:32.681 UTC: 	 Proxy valid for 02:51:43 hours
+DEBUG 2019-10-01 23:29:32.681 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-10-02 00:23:24.914 UTC: 	 Executing command: 'submit'
+DEBUG 2019-10-02 00:23:24.952 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-02 00:23:24.959 UTC: 	 Checking credentials
+DEBUG 2019-10-02 00:23:24.960 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-02 00:23:24.960 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-02 00:23:25.064 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 7070
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-02 00:23:25.168 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 7070
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-02 00:23:25.168 UTC: 	 Proxy valid for 01:57:50 hours
+DEBUG 2019-10-02 00:23:25.169 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-10-02 00:23:25.171 UTC: 	 Executing command: 'submit'
+DEBUG 2019-10-02 00:23:25.171 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-02 00:23:25.180 UTC: 	 Checking credentials
+DEBUG 2019-10-02 00:23:25.180 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-02 00:23:25.181 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-02 00:23:25.284 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 7070
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-02 00:23:25.389 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 7070
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-02 00:23:25.389 UTC: 	 Proxy valid for 01:57:50 hours
+DEBUG 2019-10-02 00:23:25.390 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-10-02 00:27:34.748 UTC: 	 Executing command: 'submit'
+DEBUG 2019-10-02 00:27:34.752 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-02 00:27:34.757 UTC: 	 Checking credentials
+DEBUG 2019-10-02 00:27:34.758 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-02 00:27:34.758 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-02 00:27:34.860 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 6821
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-02 00:27:34.965 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 6821
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-02 00:27:34.965 UTC: 	 Proxy valid for 01:53:41 hours
+DEBUG 2019-10-02 00:27:34.966 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-10-02 00:27:34.968 UTC: 	 Executing command: 'submit'
+DEBUG 2019-10-02 00:27:34.968 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-02 00:27:34.977 UTC: 	 Checking credentials
+DEBUG 2019-10-02 00:27:34.977 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-02 00:27:34.977 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-02 00:27:35.081 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 6820
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-02 00:27:35.186 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 6820
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-02 00:27:35.186 UTC: 	 Proxy valid for 01:53:40 hours
+DEBUG 2019-10-02 00:27:35.187 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-10-02 00:33:16.392 UTC: 	 Executing command: 'status'
+DEBUG 2019-10-02 00:33:16.392 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-02 00:33:40.216 UTC: 	 Executing command: 'kill'
+DEBUG 2019-10-02 00:33:40.216 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-02 01:06:40.231 UTC: 	 Executing command: 'getlog'
+DEBUG 2019-10-02 01:06:40.231 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-03 01:22:14.959 UTC: 	 Executing command: 'submit'
+DEBUG 2019-10-03 01:22:14.959 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-09 19:36:53.571 UTC: 	 Executing command: 'submit'
+DEBUG 2019-10-09 19:36:53.594 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-09 19:36:53.599 UTC: 	 Checking credentials
+DEBUG 2019-10-09 19:36:53.599 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-09 19:36:53.599 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-09 19:36:53.702 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 86338
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-09 19:36:53.805 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 86338
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-09 19:36:53.805 UTC: 	 Proxy valid for 23:58:58 hours
+DEBUG 2019-10-09 19:36:53.806 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-10-09 19:36:53.829 UTC: 	 Executing command: 'submit'
+DEBUG 2019-10-09 19:36:53.829 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-10-09 19:36:53.837 UTC: 	 Checking credentials
+DEBUG 2019-10-09 19:36:53.837 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-09 19:36:53.837 UTC: 	 Getting proxy life time left
+DEBUG 2019-10-09 19:36:53.941 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 86338
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-09 19:36:54.045 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 86337
+
+ error: 
+ retcode : 0
+DEBUG 2019-10-09 19:36:54.045 UTC: 	 Proxy lifetime 86338 secs is different from voms extension lifetime 86337 secs for proxy: /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-10-09 19:36:54.045 UTC: 	 Proxy valid for 23:58:57 hours
+DEBUG 2019-10-09 19:36:54.046 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-10-09 19:47:45.274 UTC: 	 Executing command: 'kill'
+DEBUG 2019-10-09 19:47:45.274 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-11-18 20:38:54.186 UTC: 	 Running on: Linux hexcms 3.10.0-1062.4.1.el7.x86_64 #1 SMP Fri Oct 18 17:15:30 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2019-11-18 20:38:54.203 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2019-11-18 20:38:54.204 UTC: 	 Executing command: 'kill'
+DEBUG 2019-11-18 20:38:54.204 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-11-18 20:38:54.220 UTC: 	 Running on: Linux hexcms 3.10.0-1062.4.1.el7.x86_64 #1 SMP Fri Oct 18 17:15:30 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2019-11-18 20:38:54.235 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2019-11-18 20:38:54.235 UTC: 	 Executing command: 'kill'
+DEBUG 2019-11-18 20:38:54.236 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-11-18 20:45:34.724 UTC: 	 Running on: Linux hexcms 3.10.0-1062.4.1.el7.x86_64 #1 SMP Fri Oct 18 17:15:30 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2019-11-18 20:45:34.732 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2019-11-18 20:45:34.732 UTC: 	 Executing command: 'submit'
+DEBUG 2019-11-18 20:45:34.767 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-11-18 20:45:34.772 UTC: 	 Checking credentials
+DEBUG 2019-11-18 20:45:34.773 UTC: 	 Found proxy file /home/seg188/private/personal/voms_proxy.cert
+DEBUG 2019-11-18 20:45:34.773 UTC: 	 Getting proxy life time left
+DEBUG 2019-11-18 20:45:34.876 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -timeleft
+ output : 42397
+
+ error: 
+ retcode : 0
+DEBUG 2019-11-18 20:45:34.980 UTC: 	 Executing : 
+ command : voms-proxy-info -file /home/seg188/private/personal/voms_proxy.cert -actimeleft
+ output : 42397
+
+ error: 
+ retcode : 0
+DEBUG 2019-11-18 20:45:34.981 UTC: 	 Proxy valid for 11:46:37 hours
+DEBUG 2019-11-18 20:45:34.981 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-11-18 20:59:02.816 UTC: 	 Running on: Linux hexcms 3.10.0-1062.4.1.el7.x86_64 #1 SMP Fri Oct 18 17:15:30 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2019-11-18 20:59:02.833 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2019-11-18 20:59:02.834 UTC: 	 Executing command: 'kill'
+DEBUG 2019-11-18 20:59:02.834 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-11-18 20:59:02.850 UTC: 	 Running on: Linux hexcms 3.10.0-1062.4.1.el7.x86_64 #1 SMP Fri Oct 18 17:15:30 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2019-11-18 20:59:02.866 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2019-11-18 20:59:02.866 UTC: 	 Executing command: 'kill'
+DEBUG 2019-11-18 20:59:02.866 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-11-19 02:35:07.624 UTC: 	 Running on: Linux hexcms 3.10.0-1062.4.1.el7.x86_64 #1 SMP Fri Oct 18 17:15:30 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2019-11-19 02:35:07.640 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2019-11-19 02:35:07.640 UTC: 	 Executing command: 'status'
+DEBUG 2019-11-19 02:35:07.640 UTC: 	 Found CRAB cache file /home/seg188/.crab3
+DEBUG 2019-11-19 02:35:07.673 UTC: 	 Running on: Linux hexcms 3.10.0-1062.4.1.el7.x86_64 #1 SMP Fri Oct 18 17:15:30 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2019-11-19 02:35:07.688 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2019-11-19 02:35:07.688 UTC: 	 Executing command: 'status'
+DEBUG 2019-11-19 02:35:07.688 UTC: 	 Found CRAB cache file /home/seg188/.crab3
